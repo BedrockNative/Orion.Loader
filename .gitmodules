@@ -1,0 +1,4 @@
+[submodule "external/Orion.Native"]
+	path = external/Orion.Native
+	url = https://github.com/BedrockNative/Orion.Native.git
+	branch = main
