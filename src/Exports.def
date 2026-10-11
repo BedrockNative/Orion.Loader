@@ -1,0 +1,3 @@
+LIBRARY "Orion.Loader"
+EXPORTS
+    initialize="?initialize@Loader@orion@@SAXAEBUInitializationContext@2@@Z"

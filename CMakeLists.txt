@@ -35,7 +35,7 @@ if(NOT TARGET orion::NativeHeaders)
     add_subdirectory("${ORION_NATIVE_ROOT}" "${CMAKE_CURRENT_BINARY_DIR}/orion-native" EXCLUDE_FROM_ALL)
 endif()
 
-add_library(OrionLoader SHARED src/Main.cpp)
+add_library(OrionLoader SHARED src/Main.cpp src/Exports.def)
 add_library(orion::Loader ALIAS OrionLoader)
 target_compile_features(OrionLoader PUBLIC cxx_std_20)
 target_link_libraries(OrionLoader PRIVATE orion::NativeHeaders)

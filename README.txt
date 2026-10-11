@@ -1,7 +1,10 @@
 Orion.Loader
 ============
 C++20 scaffold producing a Windows x64 DLL on Windows or Linux with clang-cl.
-Only Release and RelWithDebInfo are supported. The exported C entry point is initialize(const orion::InitializationContext&).
+Only Release and RelWithDebInfo are supported. The DLL exports initialize,
+an alias for orion::Loader::initialize(const orion::InitializationContext&).
+src/Exports.def maps the exported name directly to the C++ method; no wrapper
+is needed. Update that alias if the method's signature or qualified name changes.
 No loader behavior is implemented yet. InitializationContext and Macros.hpp come
 from the Orion.Native submodule through its orion::NativeHeaders CMake target.
 
